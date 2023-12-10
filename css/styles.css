@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;700&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+html {
+    font-family: 'Afacad', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../assets/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg');
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.boxTitles {
+    color: white;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.8rem;
+}
+
+.navIcon {
+color: white;
+font-size: 32px;
+}
+
+.saludo {
+    color: white;
+}
+
+.linkWrap, .passWrap {
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.603);
+    padding: 3rem;
+    border-radius: 14px;
+}
+
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.linkInput {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+    border-radius: 7px;
+    border: solid 1px grey;
+    outline: none;
+    transition: all 0.4s ease;
+}
+
+.linkInput:focus {
+    border-radius: 7px;
+    border: solid 2px #006494
+}
+
+.createLinkBtn {
+    background-color: #006494;
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+    font-family: 'Afacad', sans-serif;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.5s ease;
+}
+
+.createLinkBtn:hover {
+    cursor: pointer;
+    border-radius: 14px;
+}
+
+.createdLinks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 80vh;
+    gap: 2rem;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.linkCard {
+    display: flex;
+    background-color: #1D1D1D;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.bi-x-lg {
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.bi-x-lg:hover {
+    cursor: pointer;
+}
+
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.passBox, .passInputWrap, .timeWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.passInput {
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    border: solid 1px grey;
+    outline: none;
+    padding: 0.3rem;
+}
+
+.createdPass {
+    width: 100%;
+}
+
+.newPassWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+}
+
+.newPass {
+    width: 75%;
+    text-wrap: wrap;
+}
+
+.copy {
+    box-sizing: border-box;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+.copy:hover {
+    cursor: pointer;
+}
+
+.bi-clipboard-check {
+    color: #006494;
+}
+
+.timeWrap {
+    color: white;
+    border-bottom: solid 2px white;
+}
+
+.timeText {
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.dateText {
+    font-size: 22px;
+    margin: 0 0 1rem 0;
+}
