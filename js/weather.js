@@ -1,7 +1,7 @@
 const weatherContainer = document.querySelector('.weather');
 const weatherHours = document.querySelector('.weatherHours');
 
-let apiKey = 'c2e769a40dc1471f98f160536231012';
+let apiKey = 'c2e769a40dc1471f98f160536231012'
 let city = 'MADRID';
 
 
@@ -61,7 +61,7 @@ const renderData = async() => {
             <div class='weatherCard'>
                 <p class='cardText'>${time}</p>
                 <img class='tempIcon' src=${icon} alt=${time}/>
-                <p class='cardText'>${temp}</p>
+                <p class='cardText'>${temp}º</p>
             </div>
         `
         weatherHours.innerHTML += html2

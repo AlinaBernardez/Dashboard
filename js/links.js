@@ -2,12 +2,12 @@ const linkList = document.querySelector('.createdLinks');
 const createBtn = document.getElementById('btn');
 const title = document.getElementById('linkTitle');
 const link = document.getElementById('link');
+const error = document.querySelector('.errorMsg')
 
 let linkTitle;
 let linkValue;
 let cards;
 let closeBtns;
-
 
 const renderLinks = (name, route) => {
     const linktHtml = `
@@ -19,6 +19,7 @@ const renderLinks = (name, route) => {
     </div>
     `
     linkList.innerHTML += linktHtml;
+    deleteLinks();
 };
 
 const clearValues = () => {
@@ -32,11 +33,14 @@ const storeInLocal = (name, route) => {
 
 const renderLocal = () => {
     const arrayLocal = Object.entries(localStorage);
-    arrayLocal.forEach(item => {
+    if(arrayLocal.length > 0) {
+        return arrayLocal.forEach(item => {
         let title = item[0];
         let url = item[1];
-        return renderLinks(title, url)
-    })
+        renderLinks(title, url)
+        })
+    }
+    
 };
 
 const deleteFromLocal = (value) => {
@@ -60,12 +64,17 @@ renderLocal();
 deleteLinks();
 
 createBtn.addEventListener('click', () => {
-    deleteLinks();
     linkTitle = title.value;
     linkValue = link.value;
-    storeInLocal(linkTitle, linkValue);
-    renderLinks(linkTitle, linkValue);
-    clearValues();
+    if(linkTitle && linkValue) {
+        error.innerHTML = '';
+        storeInLocal(linkTitle, linkValue);
+        renderLinks(linkTitle, linkValue);
+        clearValues();
+    }
+    else {
+        error.innerHTML = '<h4>¡Rellena todos los campos!</h4>'
+    }
 });
 
 
