@@ -1,5 +1,5 @@
 const randomImage = () => {
-    let number = Math.floor(Math.random() * 10)
+    let number = Math.floor(Math.random() * 11)
     return number
 };
 
