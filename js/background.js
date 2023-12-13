@@ -3,9 +3,11 @@ const randomImage = () => {
     return number
 };
 
+let first = randomImage()
+document.body.style.backgroundImage = `url('../assets/${first}.jpg')`
+
 const changeBackground = () => {
     let img = randomImage();
-    console.log(img)
     document.body.style.backgroundImage = `url('../assets/${img}.jpg')`
 };
 

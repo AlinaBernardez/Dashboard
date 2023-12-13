@@ -2,10 +2,11 @@ const weatherContainer = document.querySelector('.weather');
 const weatherHours = document.querySelector('.weatherHours');
 
 let apiKey = 'c2e769a40dc1471f98f160536231012'
-let city = 'MADRID';
+let city = 'VALENCIA';
+let cityInput;
+let coordinates;
 
-
-const WEATHER_URL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no`
+const WEATHER_URL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=auto:ip&aqi=no`
 
 const getData = async () => {
     try {
@@ -35,9 +36,11 @@ const renderData = async() => {
 
     const html = `
     <div class='weatherWrap'>
-        <div class='weatherTitle'>
-            <p class='cityText'>${city}</p>
-            <p class='currentText'>${currentCondition}</p>
+        <div class='weatherHead'>
+            <div class='weatherTitle'>
+                <p class='cityText'>${city}</p>
+                <p class='currentText'>${currentCondition}</p>
+            </div>
         </div>
         <div class='weatherBox'>
             <img class='tempIcon' src=${currentIcon} alt=${currentCondition}/>
@@ -50,8 +53,8 @@ const renderData = async() => {
         </div>
     </div>
     `
-
     weatherContainer.innerHTML = html;
+    cityInput = document.querySelector('.cityInput');
 
     dayArray.forEach(hour => {
         let time = hour.time.slice(-5)
@@ -69,3 +72,16 @@ const renderData = async() => {
 };
 
 renderData();
+
+const getCity = () => {
+    window.addEventListener('keypress', (e) => {
+        if(e.key == 'Enter') {
+            weatherContainer.innerHTML = '';
+            weatherHours.innerHTML = '';
+            city = cityInput.value;
+            renderData();
+        }
+    })  
+};
+
+getCity();
