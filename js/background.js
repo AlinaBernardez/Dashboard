@@ -4,7 +4,6 @@ const randomImage = () => {
 };
 
 let first = randomImage()
-
 document.body.style.backgroundImage = `url('assets/${first}.jpg')`
 
 const changeBackground = () => {
