@@ -56,6 +56,8 @@ const renderTime = () => {
 
 setInterval(renderTime, 1000)
 setInterval(getFrase, 1000)
+const currentUrl = window.location.href;
+console.log(currentUrl);
 
 const renderDate = () => {
     day = new Date().getUTCDate();
