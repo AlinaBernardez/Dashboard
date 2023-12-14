@@ -4,11 +4,12 @@ const randomImage = () => {
 };
 
 let first = randomImage()
-document.body.style.backgroundImage = `url('projectbreak1-dashboard/assets/${first}.jpg')`
+
+document.body.style.backgroundImage = `url('assets/${first}.jpg')`
 
 const changeBackground = () => {
     let img = randomImage();
-    document.body.style.backgroundImage = `url('projectbreak1-dashboard/assets/${img}.jpg')`
+    document.body.style.backgroundImage = `url('assets/${img}.jpg')`
 };
 
 setInterval(changeBackground, 15000)
