@@ -20,6 +20,7 @@ body {
     background-color:#191a20dc;
     background-size: cover;
     transition: all 1s ease;
+    overflow-x: scroll;
 }
 
 a {
@@ -376,17 +377,25 @@ h4 {
     gap: 0;
 }
 
-@media (max-width: 1180px) {
-    .body {
+@media (max-width: 980px) {
+    body {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        overflow: scroll;
+        margin: 0;
+        width: 100%
     }
-}
-
-@media (max-width: 768px) {
     .menu {
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: inherit;
+    }
+    .container {
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
     }
