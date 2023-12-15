@@ -53,8 +53,8 @@ a {
     justify-content: flex-start;
     gap: 1.5rem;
     padding: 0.8rem;
-    position: relative;
-    right: 18%;
+    position: absolute;
+    left: 2%;
 }
 
 .navIcon {
@@ -377,15 +377,17 @@ h4 {
     gap: 0;
 }
 
-@media (max-width: 1145px) {
+@media (max-width: 1305px) {
     body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    margin: 0;
-    width: 100%
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: scroll;
+        margin: 0;
+        width: 100%;
+        background-size: auto;
+        background-repeat: no-repeat;
     }
     .menu {
         flex-direction: row;
@@ -401,5 +403,7 @@ h4 {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
 }
