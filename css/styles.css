@@ -377,23 +377,26 @@ h4 {
     gap: 0;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1145px) {
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        overflow: scroll;
-        margin: 0;
-        width: 100%
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    margin: 0;
+    width: 100%
     }
     .menu {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         position: inherit;
     }
+}
+
+@media (max-width: 980px) {
     .container {
         flex-direction: column-reverse;
         align-items: center;
